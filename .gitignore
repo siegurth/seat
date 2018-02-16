@@ -1,0 +1,10 @@
+#psd and ppt documents
+/src
+#node
+/node_modules
+#gulp commands
+gulpfile.js
+#config
+package.json
+#service file
+package-lock.json
