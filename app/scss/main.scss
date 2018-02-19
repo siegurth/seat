@@ -83,8 +83,8 @@ header {
 				}
 				a {
 					color: #000;
-					font-size: 16px;
-					line-height: 25px;
+					font-size: 22px;
+					line-height: 30px;
 				}
 			}
 		}
@@ -146,7 +146,7 @@ main {
 			.btn-box {
 				position: absolute;
 				left: 100px;
-				bottom: 100px;
+				bottom: 10px;
 				a {
 					&.btn {
 						display: inline-block;
