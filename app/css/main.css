@@ -163,6 +163,34 @@ header {
       header h1 a span {
         text-transform: uppercase;
         font-size: 36px; }
+  header a.sandwich-menu {
+    display: none;
+    position: relative;
+    z-index: 90;
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin: 10px 10px 0 0; }
+    header a.sandwich-menu span {
+      float: left;
+      width: 100%;
+      height: 5px;
+      background-color: #000;
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      header a.sandwich-menu span + span {
+        margin-top: 5px; }
+    header a.sandwich-menu.active span:nth-child(1) {
+      -webkit-transform: rotate(45deg) translate(14px, 14px);
+          -ms-transform: rotate(45deg) translate(14px, 14px);
+              transform: rotate(45deg) translate(14px, 14px); }
+    header a.sandwich-menu.active span:nth-child(2) {
+      opacity: 0; }
+    header a.sandwich-menu.active span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
   header nav {
     float: right;
     margin-top: 35px; }
@@ -519,3 +547,102 @@ footer {
         line-height: 24px; }
         footer div ul a:hover {
           text-decoration: underline; }
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 10px; }
+    header a.sandwich-menu {
+      display: block; }
+    header nav {
+      display: none;
+      position: absolute;
+      z-index: 60;
+      background-color: #fff;
+      width: 50%;
+      top: 10px;
+      right: 0;
+      -webkit-box-shadow: -4px 8px 8px 0px #999;
+              box-shadow: -4px 8px 8px 0px #999; }
+      header nav.active {
+        display: block; }
+      header nav ul {
+        width: 100%; }
+        header nav ul li {
+          width: 100%; }
+          header nav ul li + li {
+            margin-left: 0; }
+          header nav ul li .sub_menu {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding-left: 15px; }
+            header nav ul li .sub_menu li {
+              width: 100%;
+              text-align: left; }
+  main {
+    padding-bottom: 200px; }
+    main section {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0; }
+      main section.itemBlock .block {
+        width: 98%;
+        margin-left: 1%; }
+        main section.itemBlock .block:nth-child(2n) {
+          margin-right: 1%; }
+      main section .textBox {
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%; }
+      main section article .block.team a.avatar {
+        width: 98%;
+        text-align: center;
+        margin: 0 1%;
+        height: auto; }
+      main section article .block.team h4 {
+        margin: 20px 0;
+        float: left;
+        width: 100%;
+        text-align: center; }
+      main section article h4 {
+        text-align: center;
+        margin: 10px 0; }
+      main section article p {
+        padding: 0 10px; }
+      main section figure {
+        width: 100%;
+        padding: 0 1%; }
+      main section form .column {
+        width: 98%;
+        margin: 0 1% 1%; }
+        main section form .column + .column {
+          margin-left: 1%; }
+        main section form .column textarea {
+          width: 100%; }
+      main section form input[type="submit"] {
+        width: 98%;
+        margin: 1% 1% 0; }
+  footer {
+    margin-top: -130px;
+    height: 180px; }
+    footer .socials {
+      padding: 15px 10px 0;
+      float: left;
+      width: 100%;
+      text-align: center; }
+      footer .socials li {
+        float: none;
+        display: inline-block; }
+    footer div {
+      width: 100%; }
+      footer div p {
+        width: 100%;
+        margin-right: 0;
+        text-align: center; }
+      footer div ul {
+        width: 100%;
+        text-align: center; }
+        footer div ul li {
+          float: none;
+          display: inline-block; } }
