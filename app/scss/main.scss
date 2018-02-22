@@ -18,7 +18,7 @@ body {
 .wrapper {
 	width: 100%;
 	min-height: 100%;
-	max-height: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
 }
@@ -28,9 +28,8 @@ header {
 	background-color: #fff;
 	height: 97px;
 	section {
-		max-width: 1600px;
 		width: 100%;
-		margin: 0 auto;
+		padding: 0 5vw;
 	}
 	h1 {
 		padding-top: 8px;
@@ -97,9 +96,6 @@ header {
 					}
 					.sub_menu {
 						display: block;
-						li {
-							text-align: center;
-						}
 						a{
 							&:hover {
 								text-decoration: underline;
@@ -110,7 +106,6 @@ header {
 				&.active {
 					>a {
 						text-decoration: underline;
-						//text-shadow: 0px 0px 6px #666;
 					}
 				}
 				a {
@@ -133,6 +128,7 @@ header {
 			li {
 				float: left;
 				width: 100%;
+				text-align: center;
 			}
 		}
 	}
@@ -140,7 +136,9 @@ header {
 
 main {
 	height: calc(100vh - 162px);
-	//padding-bottom: 65px;
+	&.shown {
+		overflow: auto;
+	}
 	&.no-padding {
 		padding-bottom: 0;
 	}
@@ -148,8 +146,8 @@ main {
 		display: block;
 		width: 100%;
 		min-height: 100%;
-		//max-width: 1200px;
 		max-width: 1400px;
+		padding: 0 1%;
 		margin: 0 auto;
 		overflow: hidden;
 		position: relative;
@@ -157,7 +155,7 @@ main {
 			margin: 0;
 			max-width: 100%;
 			height: 100%;
-			//min-height: 91vh;
+			padding: 0;
 			background: url('../img/img_01.jpg') no-repeat 50% 50% / cover;
 			&.flat {
 				background: url('../img/img_02.png') no-repeat 50% 50% / cover;
@@ -171,17 +169,20 @@ main {
 			}
 			section {
 				max-width: 100%;
-				margin: 0;
+				height: 100%;
+				margin: 0 auto;
 			}
 			.btn-box {
 				position: absolute;
 				left: 100px;
-				bottom: 5vh;
+				bottom: 44px;
 				a {
 					&.btn {
 						display: inline-block;
-						width: 240px;
-						height: 65px;
+						max-width: 210px;
+						max-height: 65px;
+						width: 100%;
+						height:100%;
 						&+.btn {
 							margin-left: 25px;
 						}
@@ -196,58 +197,26 @@ main {
 		}
 		.visual {
 			float: right;
-			margin-top: -5vh;
-			padding-right: 5vw;
 			width: 50%;
-			&.no-padding {
-				padding-right: 0;
-			}
-			&.margin-top {
-				margin-top: 20px;
-			}
+			height: 100%;
 			&.alt {
-				width: 60%;
-				padding-right: 0;
-				.phone {
-					margin-top: 11vh;
-				}
-				.tablet {
-					width: 36.3vw;
+				.devices {
+					margin-top: -4vh;
+					margin-right: 0;
 				}
 			}
-			div {
-				position: relative;
-			}
-			.content {
-				background: url('../img/phone_content.png') no-repeat;
-				background-size: cover;
-				width: 100%;
+			.devices {
+		    padding-right: 2vw;
+				padding-top: 6vh;
+				padding-bottom: 30px;
 				height: 100%;
-			}
-			.phone {
-				background: url('../img/iphone.png') no-repeat;
-				//width: 227px;height: 456px;
-				width: 11.7vw;
-				height: 47vh;
-				float: left;
-				z-index: 10;
-				padding: 4.8vh .6vw 4.8vh .68vw;
-				margin-top: 16.95vh;
-				margin-right: -150px;
-			}
-			.tablet {
-				background: url('../img/samsung_tablet_landscape.png') no-repeat;
-				background-size: cover;
-				//height: 508px;width: 783px;
-				height: 46vh;
-				width: 36vw;
 				float: right;
-				z-index: 5;
-				padding: 3.7vh 2.4vw;
-				margin-top: 10vh;
-				.content {
-					background: url('../img/tablet_content.png') no-repeat;
-					background-size: cover;
+				text-align: right;
+				img {
+					max-width: 100%;
+					max-height: 100%;
+					display: inline-block;
+					border: none;
 				}
 			}
 		}
@@ -255,7 +224,6 @@ main {
 			float: left;
 			padding-top: 25px;
 			width: 35%;
-			//height: 40vh;overflow-y: scroll;overflow-x: hidden;width: 400px;
 			font-size: 16px;
 			line-height: 1.5;
 		}
@@ -279,7 +247,7 @@ main {
 				display: block;
 				content: '';
 				position: absolute;
-				top: 50%;
+				top: 61px;
 				left: 0;
 				z-index: 4;
 				width: 100%;
@@ -342,12 +310,10 @@ main {
 				margin-right: 25px;
 				margin-bottom: 10px;
 				&.avatar {
-					//border-radius: 50%;
 					width:150px;
 					overflow: hidden;
 					text-align: center;
 					img {
-						//border-radius: 50%;
 						line-height: 150px;
 					}
 				}
@@ -370,7 +336,7 @@ main {
 		}
 	}
 	.itemBlock {
-		padding-top: 2vh;
+		padding-top: 0;
 		div {
 			float: left;
 			width: 49%;
@@ -478,12 +444,13 @@ main {
 
 footer {
 	width: 100%;
-	padding: 0 100px;
+	padding: 0 5vw;
 	height: 65px;
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	z-index: 60;
+	background-color: #fff;
 	.socials {
 		padding-top: 25px;
 		float: left;
@@ -540,16 +507,18 @@ footer {
 		}
 	}
 }
+@media screen and (min-width: 981px) {
+
+}
 
 @media screen and (max-width: 980px) {
 	.wrapper {
-		max-height: auto;
+		height: auto;
 	}
-
-}
-@media screen and (max-width: 768px) {
 	header {
-		padding: 0 10px;
+		section {
+			padding: 0 10px;
+		}
 		a.sandwich-menu {
 			display: block;
 		}
@@ -594,14 +563,48 @@ footer {
 		}
 	}
 	main {
-		padding-bottom: 200px;
+		height: 100%;
+		section {
+			&.wide {
+				.btn-box {
+					position: absolute;
+					left: 2vw;
+					bottom: 5vh;
+					a {
+						&.btn {
+							max-width: 130px;
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		height: auto;
+		min-height: 65px;
+		padding: 0 1vw;
+		section {
+			padding: 0;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	header {
+		padding: 0 10px;
+		section {
+			padding: 0;
+		}
+	}
+	main {
+		padding-bottom: 180px;
+		height: 100%;
 		section {
 			width: 100%;
 			padding-left: 0;
 			padding-right: 0;
 			margin: 0;
 			&.wide {
-
+				background: url('../img/home_screen_picture.jpg') no-repeat 50% 50% / cover;
 			}
 			&.itemBlock {
 				.block {
@@ -611,6 +614,9 @@ footer {
 						margin-right: 1%;
 					}
 				}
+			}
+			.visual {
+				width: 100%;
 			}
 			.textBox {
 				width: 98%;
@@ -642,7 +648,9 @@ footer {
 					padding: 0 10px;
 				}
 			}
-			
+			.contact {
+				padding-left: 1%;
+			}
 			figure {
 				width: 100%;
 				padding: 0 1%;
@@ -658,7 +666,9 @@ footer {
 						width: 100%;
 					}
 				}
-				
+				h4 {
+					padding-left: 1%;
+				}
 				input[type="submit"] {
 					width: 98%;
 					margin: 1% 1% 0;
@@ -667,8 +677,9 @@ footer {
 		}
 	}
 	footer {
-		margin-top: -130px;
+		margin-top: -180px;
 		height: 180px;
+		position: relative;
 		.socials {
 			padding: 15px 10px 0;
 			float: left;
