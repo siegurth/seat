@@ -138,7 +138,7 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-height: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative; }
 
@@ -147,9 +147,8 @@ header {
   background-color: #fff;
   height: 97px; }
   header section {
-    max-width: 1600px;
     width: 100%;
-    margin: 0 auto; }
+    padding: 0 5vw; }
   header h1 {
     padding-top: 8px;
     float: left; }
@@ -164,6 +163,8 @@ header {
       header h1 a span {
         text-transform: uppercase;
         font-size: 36px; }
+      header h1 a em {
+        list-style: normal; }
   header a.sandwich-menu {
     display: none;
     position: relative;
@@ -171,7 +172,7 @@ header {
     width: 30px;
     height: 30px;
     float: right;
-    margin: 10px 10px 0 0; }
+    margin: 30px 10px 0 0; }
     header a.sandwich-menu span {
       float: left;
       width: 100%;
@@ -207,8 +208,6 @@ header {
           text-decoration: underline; }
         header nav > ul > li:hover .sub_menu {
           display: block; }
-          header nav > ul > li:hover .sub_menu li {
-            text-align: center; }
           header nav > ul > li:hover .sub_menu a:hover {
             text-decoration: underline; }
         header nav > ul > li.active > a {
@@ -230,11 +229,14 @@ header {
               border-radius: 0 0 5px 5px; }
       header nav .sub_menu li {
         float: left;
-        width: 100%; }
+        width: 100%;
+        text-align: center; }
 
 main {
   height: -webkit-calc(100vh - 162px);
   height: calc(100vh - 162px); }
+  main.shown {
+    overflow: auto; }
   main.no-padding {
     padding-bottom: 0; }
   main section {
@@ -242,6 +244,7 @@ main {
     width: 100%;
     min-height: 100%;
     max-width: 1400px;
+    padding: 0 1%;
     margin: 0 auto;
     overflow: hidden;
     position: relative; }
@@ -249,6 +252,7 @@ main {
       margin: 0;
       max-width: 100%;
       height: 100%;
+      padding: 0;
       background: url("../img/img_01.jpg") no-repeat 50% 50%/cover; }
       main section.wide.flat {
         background: url("../img/img_02.png") no-repeat 50% 50%/cover; }
@@ -260,15 +264,18 @@ main {
         float: left; }
       main section.wide section {
         max-width: 100%;
-        margin: 0; }
+        height: 100%;
+        margin: 0 auto; }
       main section.wide .btn-box {
         position: absolute;
-        left: 100px;
-        bottom: 5vh; }
+        left: 5vw;
+        bottom: 44px; }
         main section.wide .btn-box a.btn {
           display: inline-block;
-          width: 240px;
-          height: 65px; }
+          max-width: 210px;
+          max-height: 65px;
+          width: 100%;
+          height: 100%; }
           main section.wide .btn-box a.btn + .btn {
             margin-left: 25px; }
           main section.wide .btn-box a.btn img {
@@ -277,51 +284,23 @@ main {
             display: inline-block; }
     main section .visual {
       float: right;
-      margin-top: -5vh;
-      padding-right: 5vw;
-      width: 50%; }
-      main section .visual.no-padding {
-        padding-right: 0; }
-      main section .visual.margin-top {
-        margin-top: 20px; }
-      main section .visual.alt {
-        width: 60%;
-        padding-right: 0; }
-        main section .visual.alt .phone {
-          margin-top: 11vh; }
-        main section .visual.alt .tablet {
-          width: 36.3vw; }
-      main section .visual div {
-        position: relative; }
-      main section .visual .content {
-        background: url("../img/phone_content.png") no-repeat;
-        -webkit-background-size: cover;
-                background-size: cover;
-        width: 100%;
-        height: 100%; }
-      main section .visual .phone {
-        background: url("../img/iphone.png") no-repeat;
-        width: 11.7vw;
-        height: 47vh;
-        float: left;
-        z-index: 10;
-        padding: 4.8vh .6vw 4.8vh .68vw;
-        margin-top: 16.95vh;
-        margin-right: -150px; }
-      main section .visual .tablet {
-        background: url("../img/samsung_tablet_landscape.png") no-repeat;
-        -webkit-background-size: cover;
-                background-size: cover;
-        height: 46vh;
-        width: 36vw;
+      width: 50%;
+      height: 100%; }
+      main section .visual.alt .devices {
+        margin-top: -4vh;
+        margin-right: 0; }
+      main section .visual .devices {
+        padding-right: 2vw;
+        padding-top: 6vh;
+        padding-bottom: 30px;
+        height: 100%;
         float: right;
-        z-index: 5;
-        padding: 3.7vh 2.4vw;
-        margin-top: 10vh; }
-        main section .visual .tablet .content {
-          background: url("../img/tablet_content.png") no-repeat;
-          -webkit-background-size: cover;
-                  background-size: cover; }
+        text-align: right; }
+        main section .visual .devices img {
+          max-width: 100%;
+          max-height: 100%;
+          display: inline-block;
+          border: none; }
     main section .textBox {
       float: left;
       padding-top: 25px;
@@ -345,7 +324,7 @@ main {
         display: block;
         content: '';
         position: absolute;
-        top: 50%;
+        top: 61px;
         left: 0;
         z-index: 4;
         width: 100%;
@@ -415,7 +394,7 @@ main {
               border-radius: 5px;
       display: inline-block; }
   main .itemBlock {
-    padding-top: 2vh; }
+    padding-top: 0; }
     main .itemBlock div {
       float: left;
       width: 49%;
@@ -510,12 +489,13 @@ main {
 
 footer {
   width: 100%;
-  padding: 0 100px;
+  padding: 0 5vw;
   height: 65px;
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 60; }
+  z-index: 60;
+  background-color: #fff; }
   footer .socials {
     padding-top: 25px;
     float: left; }
@@ -563,50 +543,95 @@ footer {
 
 @media screen and (max-width: 980px) {
   .wrapper {
-    max-height: auto; } }
+    height: auto; }
+  header section {
+    padding: 0 10px; }
+  header a.sandwich-menu {
+    display: block; }
+  header nav {
+    display: none;
+    position: absolute;
+    z-index: 60;
+    background-color: #fff;
+    width: 50%;
+    top: 10px;
+    right: 0;
+    -webkit-box-shadow: -4px 8px 8px 0px #999;
+            box-shadow: -4px 8px 8px 0px #999; }
+    header nav.active {
+      display: block; }
+    header nav ul {
+      width: 100%; }
+      header nav ul li {
+        width: 100%; }
+        header nav ul li + li {
+          margin-left: 0; }
+        header nav ul li:hover li {
+          text-align: left; }
+        header nav ul li .sub_menu {
+          display: block;
+          position: relative;
+          left: 0;
+          top: 0;
+          width: 100%;
+          padding-left: 15px; }
+          header nav ul li .sub_menu li {
+            width: 100%;
+            text-align: left; }
+  main section.wide .btn-box {
+    position: absolute;
+    left: 2vw;
+    bottom: 5vh; }
+    main section.wide .btn-box a.btn {
+      max-width: 180px; }
+  footer {
+    height: auto;
+    min-height: 65px;
+    padding: 0 1vw; }
+    footer section {
+      padding: 0; } }
 
 @media screen and (max-width: 768px) {
   header {
     padding: 0 10px; }
-    header a.sandwich-menu {
-      display: block; }
-    header nav {
-      display: none;
-      position: absolute;
-      z-index: 60;
-      background-color: #fff;
-      width: 50%;
-      top: 10px;
-      right: 0;
-      -webkit-box-shadow: -4px 8px 8px 0px #999;
-              box-shadow: -4px 8px 8px 0px #999; }
-      header nav.active {
-        display: block; }
-      header nav ul {
-        width: 100%; }
-        header nav ul li {
-          width: 100%; }
-          header nav ul li + li {
-            margin-left: 0; }
-          header nav ul li:hover li {
-            text-align: left; }
-          header nav ul li .sub_menu {
-            display: block;
-            position: relative;
-            left: 0;
-            top: 0;
-            width: 100%;
-            padding-left: 15px; }
-            header nav ul li .sub_menu li {
-              width: 100%;
-              text-align: left; }
+    header section {
+      padding: 0; }
+    header .logo em {
+      display: none; }
+    header .logo span {
+      display: none; }
   main {
-    padding-bottom: 200px; }
+    padding-bottom: 180px;
+    height: auto;
+    min-height: 100%; }
     main section {
       width: 100%;
       padding-left: 0;
       padding-right: 0;
       margin: 0; }
+      main section.wide {
+        background: url("../img/home_screen_picture.jpg") no-repeat 50% 50%/cover; }
+        main section.wide .btn-box {
+          position: relative;
+          left: 0;
+          bottom: 0;
+          float: left;
+          width: 100%;
+          padding: 0 1%;
+          margin-bottom: 2vh; }
+          main section.wide .btn-box a.btn {
+            float: left;
+            width: 49%;
+            max-width: 49%;
+            max-height: 115px; }
+            main section.wide .btn-box a.btn + .btn {
+              margin-left: 2%; }
+        main section.wide .visual {
+          width: 100%;
+          height: auto; }
+          main section.wide .visual .devices {
+            padding-right: 1vw;
+            text-align: center; }
       main section.itemBlock .block {
         width: 98%;
         margin-left: 1%; }
@@ -631,6 +656,8 @@ footer {
         margin: 10px 0; }
       main section article p {
         padding: 0 10px; }
+      main section .contact {
+        padding-left: 1%; }
       main section figure {
         width: 100%;
         padding: 0 1%; }
@@ -641,12 +668,15 @@ footer {
           margin-left: 1%; }
         main section form .column textarea {
           width: 100%; }
+      main section form h4 {
+        padding-left: 1%; }
       main section form input[type="submit"] {
         width: 98%;
         margin: 1% 1% 0; }
   footer {
-    margin-top: -130px;
-    height: 180px; }
+    margin-top: -180px;
+    height: 180px;
+    position: relative; }
     footer .socials {
       padding: 15px 10px 0;
       float: left;
@@ -655,6 +685,8 @@ footer {
       footer .socials li {
         float: none;
         display: inline-block; }
+        footer .socials li:first-child {
+          display: none; }
     footer div {
       width: 100%; }
       footer div p {
