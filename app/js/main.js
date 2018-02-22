@@ -7,10 +7,22 @@ $(document).ready(function(){
 	});
 
 	$(window).on('resize', function(){
-		var w = $(window).width();
+		var w = $(window).width(),
+				mh = $('main').height();
 
 		if (w >= 769) {
 			$('.sandwich-menu, nav').removeClass('active');
 		}
+
+		if (mh <=652) {
+			$('main').css({'overflow':'auto'});
+		}
 	});
+
+	$(window).on('load', function(){
+		if (mh <=652) {
+			$('main').css({'overflow':'auto'});
+		}	
+	});
+	
 });
