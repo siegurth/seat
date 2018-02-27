@@ -244,6 +244,8 @@ main {
     overflow: auto; }
   main.no-padding {
     padding-bottom: 0; }
+  main footer {
+    margin-bottom: -65px; }
   main section {
     display: block;
     width: 100%;
@@ -501,7 +503,7 @@ footer {
   width: 100%;
   padding: 0 5vw;
   height: 65px;
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   z-index: 60;
