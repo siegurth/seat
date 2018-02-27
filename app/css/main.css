@@ -296,6 +296,8 @@ main {
       main section .visual.alt .devices {
         margin-top: -4vh;
         margin-right: 0; }
+        main section .visual.alt .devices img {
+          max-width: 80%; }
       main section .visual .devices {
         padding-right: 10vw;
         padding-top: 6vh;
@@ -617,8 +619,9 @@ footer {
     height: auto;
     min-height: 100%; }
     main.footIn {
-      padding-bottom: 180px;
       height: auto; }
+    main footer {
+      margin-top: 0; }
     main section {
       width: 100%;
       padding-left: 0;
@@ -641,12 +644,20 @@ footer {
             max-height: 115px; }
             main section.wide .btn-box a.btn + .btn {
               margin-left: 2%; }
-        main section.wide .visual {
+      main section .visual {
+        width: 100%;
+        height: auto; }
+        main section .visual .devices {
+          padding-right: 1vw;
+          text-align: center; }
+        main section .visual.alt {
+          float: left;
           width: 100%;
-          height: auto; }
-          main section.wide .visual .devices {
-            padding-right: 1vw;
-            text-align: center; }
+          padding: 0 1vw; }
+          main section .visual.alt .devices {
+            padding: 0; }
+            main section .visual.alt .devices img {
+              max-width: 100%; }
       main section.itemBlock .container .block {
         width: 98%;
         margin-left: 1%; }
@@ -696,7 +707,7 @@ footer {
         width: 98%;
         margin: 1% 1% 0; }
   footer {
-    margin-bottom: -180px;
+    margin-top: -180px;
     height: 180px;
     position: relative; }
     footer .socials {
