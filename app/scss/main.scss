@@ -142,6 +142,7 @@ main {
 	position: relative;
 	&.footIn {
 		height: calc(100vh - 97px);
+		//height: 95vh;
 		padding-bottom: 65px;
 	}
 	&.shown {
@@ -149,6 +150,9 @@ main {
 	}
 	&.no-padding {
 		padding-bottom: 0;
+	}
+	footer {
+		margin-bottom: -65px;
 	}
 	section {
 		display: block;
@@ -463,7 +467,7 @@ footer {
 	width: 100%;
 	padding: 0 5vw;
 	height: 65px;
-	position: absolute;
+	position: relative;
 	left: 0;
 	bottom: 0;
 	z-index: 60;
