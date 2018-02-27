@@ -215,6 +215,9 @@ main {
 				.devices {
 					margin-top: -4vh;
 					margin-right: 0;
+					img {
+						max-width: 80%;
+					}
 				}
 			}
 			.devices {
@@ -628,8 +631,11 @@ footer {
 		height: auto;
 		min-height: 100%;
 		&.footIn {
-			padding-bottom: 180px;
+			//padding-bottom: 180px;
 			height: auto;
+		}
+		footer {
+			margin-top: 0;
 		}
 		section {
 			width: 100%;
@@ -658,15 +664,27 @@ footer {
 						}
 					}
 				}
-				.visual {
+			}
+			.visual {
+				width: 100%;
+				height: auto;
+				.devices {
+					padding-right: 1vw;
+					text-align: center;
+				}
+				&.alt {
+					float: left;
 					width: 100%;
-					height: auto;
+					padding: 0 1vw;
 					.devices {
-						padding-right: 1vw;
-						text-align: center;
+						padding: 0;
+						img {
+							max-width: 100%;
+						}
 					}
 				}
 			}
+			
 			&.itemBlock {
 				.container {
 					.block {
@@ -747,7 +765,7 @@ footer {
 		}
 	}
 	footer {
-		margin-bottom: -180px;
+		margin-top: -180px;
 		height: 180px;
 		position: relative;
 		.socials {
