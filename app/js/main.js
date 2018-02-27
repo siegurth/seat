@@ -20,6 +20,7 @@ $(document).ready(function(){
 	});
 
 	$(window).on('load', function(){
+		var mh = $('main').height();
 		if (mh <=652) {
 			$('main').css({'overflow':'auto'});
 		}	
