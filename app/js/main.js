@@ -24,5 +24,9 @@ $(document).ready(function(){
 			$('main').css({'overflow':'auto'});
 		}	
 	});
+
+	$('.btn').click(function(){
+		alert('Coming soon');
+	});
 	
 });
