@@ -353,6 +353,10 @@ main {
     main section h4 {
       font-size: 24px;
       line-height: 32px; }
+    main section h5 {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 15px; }
     main section figure {
       float: left;
       width: 550px;
