@@ -313,6 +313,21 @@ main {
 			line-height: 1.5;
 			margin-bottom: 15px;
 		}
+		ul {
+			margin-bottom: 15px;
+			&.pp {
+				list-style: disc;
+				padding-left: 30px;
+				li {
+					font-size: 16px;
+					line-height: 1.5;
+
+					&+li {
+						margin-top: 16px;
+					}
+				}
+			}
+		}
 		.block {
 			float: left;
 			width: 100%;
